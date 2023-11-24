@@ -1,38 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;600&family=Signika+Negative:wght@300;400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  background: url("https://marvelapp.com/wp-content/uploads/2020/07/87.png");
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.Todo-wrapper {
+  background-color: rgba(54, 120, 120, 0.587);
+  backdrop-filter: blur(10px);
+  margin-top: 5rem;
+  padding: 2rem;
+  border-radius: 3px;
+  width: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.TodoForm {
+  width: 100%;
+  margin-bottom: 1rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.TodoInput {
+  outline: 0;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border: 1px solid white;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+.todo-btn {
+  background: rgb(22, 158, 129);
   color: white;
+  padding: 0.5rem;
+  border: 2px solid rgb(22, 158, 129);
+  cursor: pointer;
+  font-size: 16px;
+  transition: linear 0.5s;
+
+  transition: box-shadow 0.3s;
 }
 
-.App-link {
-  color: #61dafb;
+.todo-btn:hover {
+  box-shadow: 0 0 10px rgb(22, 158, 129);
+}
+.Todo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(22, 158, 129);
+  padding: 0.75rem 1rem;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  color: white;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+.TodoInput::placeholder {
+  font-size: 16px;
+  font-weight: 500;
+}
+.fa-trash {
+  margin-left: 1rem;
+}
+.fa-edit,
+.fa-trash {
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.heading {
+  text-transform: capitalize;
+  color: white;
+  margin-bottom: 1rem;
+}
+.completed {
+  color: red;
+  cursor: pointer;
+  text-decoration: line-through;
+}
+
+.time {
+  margin-top: 3rem;
+  margin-right: 3rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: rgb(245, 241, 241);
+  font-size: 30px;
+  font-weight: 700;
+  background-color: rgba(22, 158, 129, 0.616);
+  backdrop-filter: blur(10px);
+  padding: 10px;
+  border-radius: 3px;
+}
+.date {
+  margin-top: 0.5rem;
+  font-size: 20px;
 }
